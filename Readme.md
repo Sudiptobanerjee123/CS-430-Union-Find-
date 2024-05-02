@@ -73,3 +73,7 @@ python3 plot_operations.py
 pip install matplotlib
 pip install numpy
 ```
+
+## Plotting function
+
+![Plot_Union_Find_By_Path_Compression](images/Graph.png)
