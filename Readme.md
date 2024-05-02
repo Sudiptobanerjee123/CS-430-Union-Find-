@@ -10,6 +10,13 @@
 
 This project implements two algorithms: Union-Find and Union-Find with Path Compression. These data structures are used to maintain disjoint sets and perform operations such as finding the representative element of a set and merging (unioning) two sets.
 
+## Install External Libraries
+
+```bash
+pip install matplotlib
+pip install numpy
+```
+
 ## Algorithm Descriptions
 
 ### 1. Union-Find
@@ -41,11 +48,7 @@ The Union-Find with Path Compression algorithm enhances the basic Union-Find alg
 
 The project includes a `main.py` file that serves as the entry point for executing the algorithms. It reads input from a file, processes the operations, and writes the output to another file.
 
-## Plot Performance Analysis
-
-The `plot_operations.py` file contains code to analyze the performance of the Union-Find with Path Compression algorithm for multiple inputs. It measures the time taken for operations from input files and plots the results.
-
-## Run the Program (Union_find)
+## Run the Main Program (Union_find with Path Compression)
 
 To run the program, use the following command:
 
@@ -59,19 +62,16 @@ python3 main.py -i <inputfile>
 python3 main.py -i input.txt
 ```
 
+## Plot Performance Analysis
+
+The `plot_operations.py` file contains code to analyze the performance of the Union-Find with Path Compression algorithm for multiple inputs. It measures the time taken for operations from input files and plots the results.
+
 ## Run the Program (Plot Performance)
 
 To run the following functionality, use the following command:
 
 ```bash
 python3 plot_operations.py
-```
-
-## Install External Libraries
-
-```bash
-pip install matplotlib
-pip install numpy
 ```
 
 ## Plotting function
