@@ -80,4 +80,4 @@ python3 plot_operations.py
 
 ## Download Report
 
-[Report](Report (Sudipta Banerjee).pdf)
+![Report](Report (Sudipta Banerjee).pdf)
