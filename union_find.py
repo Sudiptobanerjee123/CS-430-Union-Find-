@@ -1,22 +1,24 @@
-class UnionFind:
-    def __init__(self, size):
-        self.parent = list(range(size))
-        self.rank = [0] * size
+def UnionFind(size):
+    parent = list(range(size))
+    rank = [0] * size
 
-    def find(self, m):
-        if self.parent[m] != m:
-            self.parent[m] = self.find(self.parent[m])
-        return self.parent[m]
+    def find_root(node):
+        while parent[node] != node:
+            parent[node], node = parent[parent[node]], parent[node]
+        return node
 
-    def union(self, m, n):
-        rootM = self.find(m)
-        rootN = self.find(n)
+    def link_roots(rootX, rootY):
+        if rank[rootX] < rank[rootY]:
+            parent[rootX] = rootY
+        elif rank[rootX] > rank[rootY]:
+            parent[rootY] = rootX
+        else:
+            parent[rootY] = rootX
+            rank[rootX] += 1
 
-        if rootM != rootN:
-            if self.rank[rootM] < self.rank[rootN]:
-                self.parent[rootM] = rootN
-            elif self.rank[rootM] > self.rank[rootN]:
-                self.parent[rootN] = rootM
-            else:
-                self.parent[rootN] = rootM
-                self.rank[rootM] += 1
+    def union_rank(x, y):
+        rootX, rootY = find_root(x), find_root(y)
+        if rootX != rootY:
+            link_roots(rootX, rootY)
+
+    return find_root, union_rank

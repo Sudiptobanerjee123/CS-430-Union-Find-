@@ -1,14 +1,24 @@
-from union_find import UnionFind
+def UnionFindWithPathCompression(size):
+    parent = list(range(size))
+    rank = [0] * size
 
-class UnionFindWithPathCompression(UnionFind):
-    def find(self, k):
-        root = k
-        while root != self.parent[root]:
-            root = self.parent[root]
-        
-        while k != root:
-            next_k = self.parent[k]
-            self.parent[k] = root
-            k = next_k
-        
-        return root
+    def find_root(node):
+        if parent[node] != node:
+            parent[node] = find_root(parent[node])
+        return parent[node]
+
+    def link_roots(rootX, rootY):
+        if rank[rootX] < rank[rootY]:
+            parent[rootX] = rootY
+        elif rank[rootX] > rank[rootY]:
+            parent[rootY] = rootX
+        else:
+            parent[rootY] = rootX
+            rank[rootX] += 1
+
+    def union_rank(x, y):
+        rootX, rootY = find_root(x), find_root(y)
+        if rootX != rootY:
+            link_roots(rootX, rootY)
+
+    return find_root, union_rank
