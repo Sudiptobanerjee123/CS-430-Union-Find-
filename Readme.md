@@ -1,6 +1,6 @@
 # Introduction To Algorithms CS-430 (Project)
 
-## Contributor
+## Contributors
 
 - **Name:** Sudipta Banerjee
 - **CWID:** A20460632
@@ -47,11 +47,11 @@ The project includes a `main.py` file that serves as the entry point for executi
 To run the program, use the following command:
 
 ```bash
-python3 main.py <input_file> <output_file>
+python3 main.py -i <inputfile>
 ```
 
 ### Replace input_file with input.txt and output_file with output.txt
 
 ```bash
-python3 main.py input.txt output.txt
+python3 main.py -i input.txt
 ```
