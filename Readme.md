@@ -1,4 +1,12 @@
-# Union-Find and Union-Find with Path Compression
+# Introduction To Algorithms CS-430 (Project)
+
+## Contributors
+
+- **Name:** Sudipta Banerjee
+- **CWID:** A20460632
+- **Email:** sbanerjee5@hawk.iit.edu
+
+## Union-Find and Union-Find with Path Compression (Description)
 
 This project implements two algorithms: Union-Find and Union-Find with Path Compression. These data structures are used to maintain disjoint sets and perform operations such as finding the representative element of a set and merging (unioning) two sets.
 
