@@ -38,8 +38,10 @@ To run the program, use the following command:
 
 ```bash
 python3 main.py <input_file> <output_file>
+```
 
-Replace input_file with input.txt and output_file with output.txt
+### Replace input_file with input.txt and output_file with output.txt
 
 ```bash
 python3 main.py input.txt output.txt
+```
