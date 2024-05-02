@@ -78,6 +78,6 @@ python3 plot_operations.py
 
 ![Plot_Union_Find_By_Path_Compression](images/Graph.png)
 
-## Download Report
+## Download Report (https://github.com/Sudiptobanerjee123/CS-430-Union-Find-Path-Compression/blob/main/Report%20(Sudipta%20Banerjee).pdf)
 
-[Report](https://github.com/Sudiptobanerjee123/CS-430-Union-Find-Path-Compression/blob/main/Report%20(Sudipta%20Banerjee).pdf)
+
