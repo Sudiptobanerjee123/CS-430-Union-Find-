@@ -77,3 +77,7 @@ python3 plot_operations.py
 ## Plotting function
 
 ![Plot_Union_Find_By_Path_Compression](images/Graph.png)
+
+## Download Report
+
+[Report](Report (Sudipta Banerjee).pdf)
