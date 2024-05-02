@@ -30,9 +30,11 @@ The Union-Find with Path Compression algorithm is an optimization of the basic U
 - The `find` method is overridden to include path compression. It first finds the root of the set using the standard `find` algorithm. Then, while traversing back up the path, it directly links each visited node to the root, effectively flattening the tree.
 - The `union` method is inherited from the `UnionFind` class and performs the union operation using the Union by Rank heuristic.
 
-## Usage
+## Main function
 
 The project includes a `main.py` file that serves as the entry point for executing the algorithms. It reads input from a file, processes the operations, and writes the output to another file.
+
+## Run the Program
 
 To run the program, use the following command:
 
