@@ -53,7 +53,7 @@ To run the program, use the following command:
 python3 main.py -i <inputfile>
 ```
 
-### Replace input_file with input.txt and output_file with output.txt
+### Replace input_file with input.txt
 
 ```bash
 python3 main.py -i input.txt
@@ -65,4 +65,11 @@ To run the following functionality, use the following command:
 
 ```bash
 python3 plot_operations.py
+```
+
+## Install External Libraries
+
+```bash
+pip install matplotlib
+pip install numpy
 ```
