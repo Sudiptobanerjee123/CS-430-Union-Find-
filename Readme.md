@@ -14,35 +14,38 @@ This project implements two algorithms: Union-Find and Union-Find with Path Comp
 
 ### 1. Union-Find
 
-The Union-Find data structure is used to maintain a collection of disjoint (non-overlapping) sets. It supports two main operations:
+The Union-Find data structure is utilized to manage a collection of disjoint (non-overlapping) sets. It supports two principal operations:
 
-- **Union(x, y)**: Merge the sets containing elements `x` and `y` into a single set.
-- **Find(x)**: Determine the representative element (root) of the set that contains `x`.
+- **Union(x, y)**: Merges the sets containing elements `x` and `y` into a single set.
+- **Find(x)**: Identifies the representative element (root) of the set that includes `x`.
 
-This implementation uses the **Union by Rank** heuristic, which aims to keep the tree as flat as possible by attaching the smaller tree (by rank) to the root of the larger tree during a union operation. The rank of a node is an upper bound on the height of the node in the tree.
+This implementation employs the **Union by Rank** heuristic, which aims to maintain the tree as flat as possible by attaching the smaller tree (by rank) to the root of the larger tree during a union operation. The rank of a node provides an upper bound on the height of the node within the tree.
 
 #### Implementation Details
 
-- The `UnionFind` class is implemented in the `union_find.py` file.
-- The `__init__` method initializes the data structure with `size` elements, where each element is initially its own root with rank 0.
-- The `find` method follows the parent pointers until it reaches the root of the set containing the given element.
-- The `union` method first finds the roots of the sets containing `x` and `y` using the `find` method. If the roots are different, it merges the sets by attaching the smaller ranked tree to the root of the larger ranked tree. If the ranks are equal, it arbitrarily chooses one root as the parent and increments its rank.
+- The `UnionFind` function initializes with `size` elements, each element initially being its own root with a rank of 0.
+- The `find_root` function traces the parent pointers until it finds the root of the set containing the specified element, without path compression.
+- The `union_rank` function first determines the roots of the sets containing `x` and `y`. If the roots differ, the sets are merged by attaching the root of the smaller ranked tree to the root of the higher ranked tree. If the ranks are equal, one root is arbitrarily chosen as the parent, and its rank is incremented.
 
 ### 2. Union-Find with Path Compression
 
-The Union-Find with Path Compression algorithm is an optimization of the basic Union-Find algorithm. It includes path compression, which flattens the tree during the `find` operation by directly linking each visited node to the root of the set.
+The Union-Find with Path Compression algorithm enhances the basic Union-Find algorithm by incorporating path compression, which flattens the tree structure during the `find` operation, making subsequent operations faster.
 
 #### Implementation Details
 
-- The `UnionFindWithPathCompression` class is implemented in the `union_find_PC.py` file and inherits from the `UnionFind` class.
-- The `find` method is overridden to include path compression. It first finds the root of the set using the standard `find` algorithm. Then, while traversing back up the path, it directly links each visited node to the root, effectively flattening the tree.
-- The `union` method is inherited from the `UnionFind` class and performs the union operation using the Union by Rank heuristic.
+- The `UnionFindWithPathCompression` function is similar to the basic Union-Find but includes path compression during the find operation.
+- The `find_root` function is optimized with path compression, whereby it compresses the path by setting the parent of each visited node directly to the root, effectively flattening the tree during the traversal.
+- The `union_rank` function is the same as in the basic Union-Find and uses the Union by Rank heuristic to merge sets.
 
 ## Main function
 
 The project includes a `main.py` file that serves as the entry point for executing the algorithms. It reads input from a file, processes the operations, and writes the output to another file.
 
-## Run the Program
+## Plot Performance Analysis
+
+The `plot_operations.py` file contains code to analyze the performance of the Union-Find with Path Compression algorithm for multiple inputs. It measures the time taken for operations from input files and plots the results.
+
+## Run the Program (Union_find)
 
 To run the program, use the following command:
 
@@ -54,4 +57,12 @@ python3 main.py -i <inputfile>
 
 ```bash
 python3 main.py -i input.txt
+```
+
+## Run the Program (Plot Performance)
+
+To run the following functionality, use the following command:
+
+```bash
+python3 plot_operations.py
 ```
