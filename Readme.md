@@ -1,6 +1,6 @@
 # Introduction To Algorithms CS-430 (Project)
 
-## Contributors
+## Contributor
 
 - **Name:** Sudipta Banerjee
 - **CWID:** A20460632
